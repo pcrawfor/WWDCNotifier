@@ -19,6 +19,12 @@ numbers.json is the list of numbers that will be notified when WWDC is announced
 
 WWDCNotifier uses restler to make the Twilio API call so you will need to either npm install restler or grab the source and add a reference to a local copy in order to use WWDCNotifier.
 
+= Run it
+
+Start it up:
+
+node run_wwdc_notifier.js
+
 == License
 
 (The MIT License)
