@@ -54,12 +54,23 @@ WWDCNotifier.prototype.init = function() {
 WWDCNotifier.prototype.loadConfig = function (configPath) {
   var self = this;
   self.config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-}
+};
 
 WWDCNotifier.prototype.loadNumbers = function (numbersPath) {
   var self = this;
   self.numbers = JSON.parse(fs.readFileSync(numbersPath, 'utf8'));
-}
+};
+
+WWDCNotifier.prototype.writeNumbers = function (numbersPath) {
+  var self = this;
+  fs.writeFileSync(numbersPath, JSON.stringify(self.numbers), 'utf8');
+};
+
+WWDCNotifier.prototype.addNumber = function (numberStr) {
+  var self = this;
+  self.numbers.concat(numberStr);
+  self.writeNumbers('./numbers.json');
+};
 
 WWDCNotifier.prototype.sendSMS = function (opt, callback) {
   var self = this;
@@ -104,7 +115,7 @@ WWDCNotifier.prototype.newWWDCAnnounced = function () {
   req.end();
 
   return matched;
-}
+};
 
 WWDCNotifier.prototype.start = function() {
   var self = this;
@@ -126,7 +137,3 @@ WWDCNotifier.prototype.start = function() {
 };
 
 module.exports = WWDCNotifier;
-
-// start an instance of the checker
-var checker = new WWDCNotifier();
-checker.start();
