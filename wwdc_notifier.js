@@ -121,7 +121,7 @@ WWDCNotifier.prototype.start = function() {
   var self = this;
   console.log("Starting WWDC Notifier");
   setInterval(function() {
-    if(!self.newWWDCAnnounced()) {          
+    if(self.newWWDCAnnounced()) {          
       self.numbers.forEach(function(numberStr){
         self.sendSMS({to:numberStr, body:"WWDC Announced! Check it out: http://developer.apple.com/wwdc/", statusCallback: "http://bexler.com:8002/smsin"}, function() {
           console.log("Send SMS!");
