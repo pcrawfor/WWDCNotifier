@@ -22,6 +22,9 @@
 
 /*
   WWDCNotifier.js
+  
+  Checks the WWDC site on a regular interval defined by intervalSeconds in config.json
+  When the site title has been modified for the new conference sends out an SMS to all numbers in numbers.json and exits
 */
 
 var http = require('http'),
