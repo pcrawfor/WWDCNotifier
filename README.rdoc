@@ -1,0 +1,45 @@
+= WWDCNotifier
+
+Do you like WWDC?
+
+Do you have a Twilio account or been wanting to try it out??
+
+Now's your chance, you can try out Twilio and get notified the minute WWDC is announced!
+
+WWDC Notifier is a node.js monitoring script that watches the WWDC website for updates and sends out an SMS when a change happens.
+WWDCNotifier uses the Twilio API to send out an SMS message when WWDC is announced.  Just modify config.json to use your Twilio account settings and number, add your phone number and those of your friends and you're good to go
+
+= Configuration
+
+There are two configuration files, config.json and numbers.json.
+config.json is where you set your Twilio account settings and also the time interval the checker will use for polling the WWDC site.
+numbers.json is the list of numbers that will be notified when WWDC is announced
+
+= Dependencies
+
+WWDCNotifier uses restler to make the Twilio API call so you will need to either npm install restler or grab the source and add a reference to a local copy in order to use WWDCNotifier.
+
+== License
+
+(The MIT License)
+
+Copyright (c) 2011 Paul Crawford
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

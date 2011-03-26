@@ -1,0 +1,6 @@
+{
+    "accountSid": "your_twilio_account_sid" ,
+    "authToken": "your_twilio_account_auth_token" ,
+    "from": "+12345678910", 
+    "intervalSeconds": 60
+}
