@@ -1,5 +1,7 @@
 = WWDCNotifier
 
+WWDC 2011 is now announced but feel free to tweak and use this code however you like!
+
 Do you like WWDC?
 
 Do you have a Twilio account or been wanting to try it out??
