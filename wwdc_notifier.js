@@ -105,19 +105,19 @@ WWDCNotifier.prototype.newWWDCAnnounced = function () {
     method: 'GET'
   };
 
-  var matched = false;
+  var newSite = true;
   var req = http.request(options, function(res) {    
     res.setEncoding('utf8');
     res.on('data', function (chunk) {      
       match = chunk.match(/<title>Apple Worldwide Developers Conference 2010<\/title>/);
       if(match && match.length > 0) {
-        matched = true;
+        newSite = false;
       }
     });
   });
   req.end();
 
-  return matched;
+  return newSite;
 };
 
 WWDCNotifier.prototype.start = function() {
